@@ -1,3 +1,5 @@
+This project has been created as part of the 42 curriculum by mamehri.
+
 # ft_printf
 
 A from-scratch re-implementation of the C library function `printf`, packaged as a static library (`libftprintf.a`).
