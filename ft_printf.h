@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mamehri <mamehri@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 22:26:10 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/28 08:22:57 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/29 08:08:02 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdint.h>
 # include <limits.h>
 
 int		ft_printf(const char *s, ...);
@@ -24,7 +25,7 @@ int		ft_printf(const char *s, ...);
 int		ft_putstr(const char *s);
 
 void	ft_putnbr_base(long n, int *rtn, char *base);
-void	ft_put_pointer(unsigned long n, int *rtn);
+void	ft_put_pointer(uintptr_t n, int *rtn);
 void	ft_check_pc(char c1, int *rtn, va_list *args);
 void	ft_check_s(char c1, int *rtn, va_list *args);
 void	ft_check_np(char c1, int *rtn, va_list *args);

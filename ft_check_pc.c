@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_pc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mamehri <mamehri@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 14:58:49 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/28 10:37:55 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/29 08:11:15 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_check_pc(char c1, int *rtn, va_list *args)
 
 	if (c1 == '%')
 	{
-		write(1, "%", 1);
+		write(1, &c1, 1);
 		*rtn += 1;
 	}
 	else if (c1 == 'c')

@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_put_pointer.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamehri <mamehri@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mamehri <mamehri@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 11:56:44 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/28 10:52:22 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/10/29 08:07:34 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_put_pointer(unsigned long n, int *rtn)
+void	ft_put_pointer(uintptr_t n, int *rtn)
 {
-	unsigned long	base_len;
-	char			*base;
+	uintptr_t	base_len;
+	char		*base;
 
 	base = "0123456789abcdef";
 	base_len = ft_strlen(base);
