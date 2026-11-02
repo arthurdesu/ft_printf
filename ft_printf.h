@@ -6,19 +6,16 @@
 /*   By: mamehri <mamehri@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 22:26:10 by mamehri           #+#    #+#             */
-/*   Updated: 2026/11/02 07:11:26 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/11/02 12:11:55 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <stdio.h>
 # include <stdarg.h>
 # include <unistd.h>
-# include <stdlib.h>
 # include <stdint.h>
-# include <limits.h>
 
 int		ft_printf(const char *s, ...);
 
