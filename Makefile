@@ -8,13 +8,13 @@ HEADER	= ft_printf.h
 
 NAME	= libftprintf.a
 
+all: $(NAME)
+
 $(NAME): $(OBJCS) 
 	@ar rcs $@ $^
 
 %.o: %.c $(HEADER)
 	@$(CC) $(CFLAGS) -c $< -o $@
-
-all: $(NAME)
 
 clean:
 	@rm -f $(OBJCS)
