@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 22:26:10 by mamehri           #+#    #+#             */
-/*   Updated: 2026/10/29 08:08:02 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/11/02 07:11:26 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,12 @@
 
 int		ft_printf(const char *s, ...);
 
-int		ft_putstr(const char *s);
+void	ft_print(char c, int *rtn, va_list *args);
 
 void	ft_putnbr_base(long n, int *rtn, char *base);
 void	ft_put_pointer(uintptr_t n, int *rtn);
-void	ft_check_pc(char c1, int *rtn, va_list *args);
-void	ft_check_s(char c1, int *rtn, va_list *args);
-void	ft_check_np(char c1, int *rtn, va_list *args);
-void	ft_check_unhex(char c1, int *rtn, va_list *args);
 
-size_t	ft_strlen(const char *str);
+int		ft_putstr(const char *s);
+int		ft_search(char c);
 
 #endif

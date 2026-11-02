@@ -1,6 +1,4 @@
-SRCS	= ft_printf.c \
-	ft_check_np.c ft_check_pc.c ft_check_s.c ft_check_unhex.c \
-	ft_put_pointer.c ft_putnbr_base.c ft_putstr.c ft_strlen.c
+SRCS	= ft_printf.c ft_write.c ft_utils.c
 
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror

@@ -1,5 +1,3 @@
-*This project has been created as part of the 42 curriculum by mamehri.*
-
 # ft_printf
 
 A from-scratch re-implementation of the C library function `printf`, packaged as a static library (`libftprintf.a`).
@@ -112,8 +110,10 @@ Integers are printed by a recursive routine parameterised by the base and by a l
 ### Classic references
 
 - [`printf(3)`, Linux manual page](https://man7.org/linux/man-pages/man3/printf.3.html)
-- [`stdarg(3)`, Linux manual page](https://man7.org/linux/man-pages/man3/stdarg.3.html): variable argument lists
+- [`stdarg(3)`, Linux manual page](https://man7.org/linux/man-pages/man3/stdarg.3.html)
 - [`write(2)`, Linux manual page](https://man7.org/linux/man-pages/man2/write.2.html)
+- [`Variadic Arguments`, Meduim](https://medium.com/@ayyouboussamas/deep-dive-into-variadic-arguments-in-c-an-x86-64-system-v-abi-analysis-a2ee0ba64834)
+- [`Variable Argument Lists`, System V Application Binary Interface](https://refspecs.linuxfoundation.org/elf/x86_64-SysV-psABI.pdf)
 
 ## AI Usage
 
