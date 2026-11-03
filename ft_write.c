@@ -6,7 +6,7 @@
 /*   By: mamehri <mamehri@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 18:30:01 by mamehri           #+#    #+#             */
-/*   Updated: 2026/11/02 07:09:34 by mamehri          ###   ########.fr       */
+/*   Updated: 2026/11/03 09:01:54 by mamehri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,11 @@ static void	ft_put_s(char c, int *rtn, va_list *args)
 
 static void	ft_put_pdi(char c1, int *rtn, va_list *args)
 {
-	uintptr_t	ar;
+	void	*ar;
 
 	if (c1 == 'p')
 	{
-		ar = va_arg(*args, uintptr_t);
+		ar = va_arg(*args, void *);
 		if (ar == 0)
 		{
 			*rtn += 5;
@@ -54,7 +54,7 @@ static void	ft_put_pdi(char c1, int *rtn, va_list *args)
 			return ;
 		}
 		*rtn += ft_putstr("0x");
-		ft_put_pointer(ar, rtn);
+		ft_put_pointer((uintptr_t)ar, rtn);
 	}
 	else if ((c1 == 'd') || (c1 == 'i'))
 		ft_putnbr_base(va_arg(*args, int), rtn, "0123456789");

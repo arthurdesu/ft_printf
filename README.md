@@ -50,7 +50,7 @@ The sources are compiled with `-Wall -Wextra -Werror`, and the library is archiv
 
 ### Installation and use in another project
 
-There is nothing to install: copy `libftprintf.a` and `ft_printf.h` into your project (or point the compiler at their location), include the header, and link the library.
+There is nothing to install: copy `libftprintf.a` and `ft_printf.h` into your project, include the header, and link the library.
 
 Example `main.c`:
 
@@ -93,14 +93,14 @@ hex: ff | HEX: FF | char: A | percent: %
 2. The format string is scanned **once, from left to right**, one character at a time.
 3. A character other than `%` is a literal: it is written as is and counted.
 4. A `%` introduces a conversion: the character that follows (the *specifier*) selects the handler to call.
-5. The handler reads its argument with `va_arg`, using the type implied by the specifier, writes the result, and **returns the number of characters it wrote**.
-6. The counts are accumulated; at the end of the string, `va_end` is called and the total is returned.
+5. The handler reads its argument with `va_arg`, using the type implied by the specifier, and writes the result.
+6. `va_end` is called and the total is returned.
 
 Notes:
 
 - **`%c` reads an `int`**: `char` and `short` arguments undergo the default argument promotions to `int` when passed through `...`, so asking `va_arg` for a `char` would be undefined behaviour.
 - **NULL handling**: a NULL string or pointer is handled explicitly. This avoids dereferencing a null pointer and mirrors the output of glibc (`(null)` / `(nil)`).
-- **`%p`**: the pointer is converted to an unsigned integer wide enough to hold an address (`unsigned long`) and printed in base 16 after `0x`.
+- **`%p`**: the pointer is converted to an unsigned integer wide enough to hold an address, and printed in base 16 after `0x`.
 - **`%u`, `%x`, `%X`** read an `unsigned int`, so values above `INT_MAX` are printed correctly.
 
 ### Number conversion: recursive digit printing
@@ -119,4 +119,4 @@ Integers are printed by a recursive routine parameterised by the base and by a l
 
 ## AI Usage
 
-AI was used as an assistant throughout the project to clarify concepts, suggest test cases, explain errors. All code was reviewed and understood by me, and the final implementation and technical decisions remained my responsibility.
+AI tools were used as a learning and assistance resource throughout this project. They helped clarify concepts related to variadic functions, `va_list`, `va_start`, `va_arg`, and the behavior of the standard `printf()` function. AI was also used to discuss potential edge cases. However, all implementation, testing, debugging, and final decisions were carried out by me. The purpose of using AI was to improve my understanding of the underlying concepts and strengthen my problem-solving skills, not to generate the project's code.
